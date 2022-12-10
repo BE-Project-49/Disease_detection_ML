@@ -1,0 +1,104 @@
+<!-- <div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+     <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data position-absolute text-center"> 
+        <div class="text-center"> 
+            <input class="form-control" type="file" >
+          
+            <button type="button" class="btn" style="margin: 10px;background:#062f4f;
+            color: azure;"> 
+            <div>
+              <ul>
+                  <li *ngFor="let file of files">
+                      
+                      <span id="file-label">
+                          {{file.data.name}}
+                      </span>
+                  </li>
+              </ul>
+  
+              <button (click)="onClick()">
+                  Upload
+              </button>
+              <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+  </div>
+               <!-- Upload 
+            </button> 
+        </div>
+        <div>
+            <button 
+                class="btn" style="margin: 20px;background:#062f4f; color: azure;">
+                Get Predictions 
+            </button>
+        </div>
+
+        <div>
+            <ul>
+                <li *ngFor="let file of files">
+                    
+                    <span id="file-label">
+                        {{file.data.name}}
+                    </span>
+                </li>
+            </ul>
+
+            <button (click)="onClick()">
+                Upload
+            </button>
+            <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+</div>
+
+            <p>
+              <mat-card class="cardS">
+                <mat-card-header>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                </mat-card-header>
+                <mat-card-actions align="end">
+                  
+                </mat-card-actions>
+              </mat-card>
+
+             </p>
+             <p>
+              <mat-card class="cardS">
+                <mat-card-header>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                </mat-card-header>
+                <mat-card-actions align="end">
+                  
+                </mat-card-actions>
+              </mat-card>
+
+             </p>
+             
+            
+       
+       </div>
+    </div> -->
+  <!-- </div> -->
+
+
+
+  <div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">
+      Dashboard
+    </div>
+    <div>
+      <label for="formFile" class="form-label">Upload file example</label>
+      <input (change)="this.onFilechange($event)" class="form-control" type="file" id="formFile">
+      <button (click)="this.upload()" type="button" class="btn-lg btn-primary mt-3">Upload</button>
+   
+
+    </div>
+    <div></div>
+    <div *ngIf="prediction.PredictedClass">
+
+    <div class="d-flex page__box p-3 mt-2">
+      <img src="{{imageDir}}{{prediction.imagesrc}}" width="400px" height="400px">
+      <div style="margin-left:20px;margin-top:20px;">
+        Predictions : {{ prediction.PredictedClass }}
+      </div>
+     
+    </div>
+    
+     </div>

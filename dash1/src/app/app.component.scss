@@ -1,0 +1,29 @@
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 260px;
+}
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer {
+  background: hsl(222, 37%, 25%);
+}
